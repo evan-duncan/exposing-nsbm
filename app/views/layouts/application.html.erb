@@ -9,7 +9,19 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="holy-grail">
+    <header>header</header>
+    <section class="body">
+      <main class="content">
+        <%= yield %>
+      </main>
+      <nav class="nav">
+        nav
+      </nav>
+      <aside class="ads">
+        ads
+      </aside>
+    </section>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

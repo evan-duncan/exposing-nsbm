@@ -1,0 +1,10 @@
+<footer>
+  <div class="left">
+    <h1><%= t('brand_name') %></h1>
+    <h2><%= t('tagline') %></h2>
+    <h3><%= t('copyright_notice', year: Time.now.year) %></h3>
+  </div>
+  <div class="right">
+    <%= link_to octicon("mark-github", height: 30, fill: '#e2d8cf'), github_url %>
+  </div>
+</footer>

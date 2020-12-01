@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+    background-color: #222;
+    color: #e2d8cf;
+}
+
+body {
+    margin: 0;
+}
+
+.holy-grail,
+.holy-grail > .body {
+    display: flex;
+    flex-direction: column;
+}
+
+.holy-grail > .body > .nav {
+    order: -1;
+}
+
+@media (min-width: 768px) {
+    .holy-grail > .body {
+        flex-direction: row;
+        flex: 1;
+    }
+
+    .holy-grail > .body > .content {
+        flex: 1;
+    }
+
+    .holy-grail > .body > .nav,
+    .holy-grail > .body > .ads {
+        flex: 0 0 12em;
+    }
+}
+
+footer {
+    padding: 0 1rem;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
