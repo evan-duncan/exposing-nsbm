@@ -51,9 +51,19 @@ body {
 
 footer {
     padding: 0 1rem;
-    background-color: #000;
+    background-color: #111;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 0 1rem;
+    background-color: #111;
+    height: 60px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin-bottom: 1rem;
+    display: flex;
     align-items: center;
 }
 
