@@ -11,6 +11,7 @@ gem 'octicons_helper'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
+gem "simple-navigation"
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
 
