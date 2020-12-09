@@ -35,5 +35,6 @@ en:
   tagline: Fuck Nazis
   user:
     log_in: Log in
+    profile: Profile
     register: Sign up
     sign_out: Sign out

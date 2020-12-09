@@ -4,7 +4,8 @@
   </div>
   <div>
     <% if user_signed_in? %>
-      <%= link_to t('user.sign_out'), destroy_user_session_path, method: :delete %>
+      <%= link_to t('user.profile'), edit_user_registration_path, style: 'padding-right: 0.5rem;' %>
+      <%= link_to t('user.sign_out'), destroy_user_session_path, method: :delete, style: 'padding-left: 0.5rem;' %>
     <% else %>
       <%= link_to t('user.register'), new_user_registration_path, style: 'padding-right: 0.5rem;' %>
       <%= link_to t('user.log_in'), new_user_session_path, style: 'padding-left: 0.5rem;' %>
