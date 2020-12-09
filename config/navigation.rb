@@ -77,6 +77,7 @@ SimpleNavigation::Configuration.run do |navigation|
     # You can turn off auto highlighting for a specific level
     #primary.auto_highlight = false
 
+    primary.item :bands, 'Bands', bands_path
 
     # Leave me at the bottom
     primary.item :me, 'Profile', edit_user_registration_path, if: -> { user_signed_in? }
