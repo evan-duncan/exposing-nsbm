@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   direct(:github) { "https://github.com/evan-duncan/exposing-nsbm" }
   devise_for :users
   resources :bands
+  resources :artists
   root 'dashboard#index'
 end
