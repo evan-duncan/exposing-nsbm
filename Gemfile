@@ -5,6 +5,7 @@ ruby '2.7.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'countries'
 gem 'devise', '>= 4.0'
 gem 'jbuilder', '~> 2.7'
 gem 'octicons_helper'
@@ -25,6 +26,8 @@ gem 'webpacker', '~> 4.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 group :development do
