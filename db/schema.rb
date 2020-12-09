@@ -10,14 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_09_022505) do
+ActiveRecord::Schema.define(version: 2020_12_09_024800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "artists", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "country_code", limit: 2, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "band_memberships", force: :cascade do |t|
+    t.bigint "artist_id", null: false
+    t.bigint "band_id", null: false
+    t.datetime "started_at"
+    t.datetime "ended_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["artist_id"], name: "index_band_memberships_on_artist_id"
+    t.index ["band_id"], name: "index_band_memberships_on_band_id"
+  end
+
   create_table "bands", force: :cascade do |t|
     t.string "name", null: false
-    t.string "country_code", null: false
+    t.string "country_code", limit: 2, null: false
     t.string "country_subdivision_code"
     t.date "formed_at"
     t.datetime "created_at", precision: 6, null: false
@@ -43,4 +61,6 @@ ActiveRecord::Schema.define(version: 2020_12_09_022505) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "band_memberships", "artists"
+  add_foreign_key "band_memberships", "bands"
 end
