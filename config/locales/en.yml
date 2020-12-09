@@ -33,3 +33,6 @@ en:
   brand_name: Exposing NSBM
   copyright_notice: "© %{year} Exposing NSBM"
   tagline: Fuck Nazis
+  user:
+    register: Sign up
+    sign_out: Sign out

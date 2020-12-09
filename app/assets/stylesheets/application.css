@@ -13,14 +13,31 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display&display=swap');
+
+:root {
+    --main-font-color: #e2d9cf;
+    --main-background-color: #222;
+    --navigation-background-color: #111;
+}
 
 html {
-    background-color: #222;
-    color: #e2d8cf;
+    background-color: var(--main-background-color);
+    color: var(--main-font-color);
 }
 
 body {
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
 }
 
 .holy-grail,
@@ -51,7 +68,7 @@ body {
 
 footer {
     padding: 0 1rem;
-    background-color: #111;
+    background-color: var(--navigation-background-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,11 +76,46 @@ footer {
 
 header {
     padding: 0 1rem;
-    background-color: #111;
+    background-color: var(--navigation-background-color);
     height: 60px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
+header .brand {
+    color: var(--main-font-color);
+}
+
+header .brand a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header .brand a:hover,
+header .brand a:focus {
+    text-decoration: underline;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover,
+a:focus {
+    color: goldenrod;
+    text-decoration: underline;
+}
+
+input {
+    background-color: #666;
+    color: var(--main-font-color);
+}
+
+input[type="submit"] {
+    background-color: darkgreen;
+}
